@@ -372,3 +372,107 @@ img {
   letter-spacing: 1px;
   opacity: 0.9;
 }
+/* ================================
+   WHY VENT CITY
+   ================================ */
+
+.why {
+  padding: 128px 64px;
+  background: var(--white);
+  border-top: 1px solid rgba(8, 8, 8, 0.08);
+}
+
+.why__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.why__top {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 80px;
+}
+
+.why__top .section-label {
+  color: var(--black);
+  opacity: 0.5;
+}
+
+.why__headline {
+  font-family: var(--font-display);
+  font-size: clamp(48px, 6vw, 80px);
+  line-height: 0.92;
+  color: var(--black);
+  letter-spacing: 1px;
+  max-width: 700px;
+}
+
+.why__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  background: rgba(8, 8, 8, 0.08);
+}
+
+.why__card {
+  background: var(--white);
+  padding: 56px 48px;
+  transition: background 0.3s ease;
+}
+
+.why__card:hover {
+  background: var(--black);
+}
+
+.why__card:hover .why__number {
+  color: var(--gold);
+}
+
+.why__card:hover .why__title {
+  color: var(--white);
+}
+
+.why__card:hover .why__body {
+  color: rgba(245, 243, 238, 0.6);
+}
+
+.why__card--wide {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.why__number {
+  font-family: var(--font-display);
+  font-size: 64px;
+  color: rgba(8, 8, 8, 0.12);
+  line-height: 1;
+  display: block;
+  margin-bottom: 24px;
+  transition: color 0.3s ease;
+}
+
+.why__card--wide .why__number {
+  font-size: 80px;
+  margin-bottom: 0;
+}
+
+.why__title {
+  font-family: var(--font-display);
+  font-size: 28px;
+  color: var(--black);
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  line-height: 1.1;
+  transition: color 0.3s ease;
+}
+
+.why__body {
+  font-size: 15px;
+  font-weight: 300;
+  color: rgba(8, 8, 8, 0.6);
+  line-height: 1.8;
+  transition: color 0.3s ease;
+}
