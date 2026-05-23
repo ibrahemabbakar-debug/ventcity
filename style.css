@@ -1,0 +1,266 @@
+/* ================================
+   VENT CITY — VISUAL SYSTEM
+   ================================ */
+
+:root {
+  --black:  #080808;
+  --gold:   #C9A84C;
+  --white:  #F5F3EE;
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body:    'Poppins', sans-serif;
+}
+
+/* ================================
+   RESET & BASE
+   ================================ */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--black);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul { list-style: none; }
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ================================
+   NAVIGATION
+   ================================ */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 64px;
+  transition: background 0.4s ease, padding 0.4s ease;
+}
+
+.nav.scrolled {
+  background: var(--black);
+  padding: 16px 64px;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+}
+
+.nav__logo {
+  font-family: var(--font-display);
+  font-size: 24px;
+  letter-spacing: 4px;
+  color: var(--white);
+}
+
+.nav__links {
+  display: flex;
+  gap: 48px;
+}
+
+.nav__links a {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(245, 243, 238, 0.6);
+  transition: color 0.3s ease;
+}
+
+.nav__links a:hover {
+  color: var(--gold);
+}
+
+.nav__cta {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--black);
+  background: var(--gold);
+  padding: 12px 28px;
+  transition: background 0.3s ease;
+}
+
+.nav__cta:hover {
+  background: var(--white);
+}
+
+.nav__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.nav__burger span {
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: var(--white);
+  transition: all 0.3s ease;
+}
+
+/* ================================
+   BUTTONS
+   ================================ */
+
+.btn {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 16px 40px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn--primary {
+  background: var(--gold);
+  color: var(--black);
+}
+
+.btn--primary:hover {
+  background: var(--white);
+  color: var(--black);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid rgba(245, 243, 238, 0.3);
+}
+
+.btn--ghost:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* ================================
+   HERO
+   ================================ */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 64px 96px;
+  position: relative;
+  background-color: var(--black);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: 'VC';
+  position: absolute;
+  top: 50%;
+  right: -40px;
+  transform: translateY(-50%);
+  font-family: var(--font-display);
+  font-size: clamp(300px, 35vw, 500px);
+  color: rgba(201, 168, 76, 0.04);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.hero__content {
+  max-width: 900px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero__label {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 32px;
+}
+
+.hero__headline {
+  font-family: var(--font-display);
+  font-size: clamp(72px, 12vw, 160px);
+  line-height: 0.92;
+  color: var(--white);
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+
+.hero__sub {
+  font-size: 18px;
+  font-weight: 300;
+  color: rgba(245, 243, 238, 0.6);
+  margin-bottom: 48px;
+  max-width: 480px;
+  line-height: 1.6;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.hero__scroll {
+  position: absolute;
+  bottom: 96px;
+  right: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.hero__scroll span {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: rgba(245, 243, 238, 0.4);
+  writing-mode: vertical-rl;
+}
+
+.hero__scroll-line {
+  width: 1px;
+  height: 80px;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+  animation: scrollLine 2s ease-in-out infinite;
+}
+
+@keyframes scrollLine {
+  0%   { transform: scaleY(0); transform-origin: top; opacity: 1; }
+  50%  { transform: scaleY(1); transform-origin: top; opacity: 1; }
+  100% { transform: scaleY(1); transform-origin: bottom; opacity: 0; }
+}
