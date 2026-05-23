@@ -476,3 +476,110 @@ img {
   line-height: 1.8;
   transition: color 0.3s ease;
 }
+/* ================================
+   SERVICES
+   ================================ */
+
+.services {
+  padding: 128px 64px;
+  background: var(--black);
+  border-top: 1px solid rgba(201, 168, 76, 0.1);
+}
+
+.services__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.services__top {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  align-items: end;
+  gap: 48px;
+  margin-bottom: 80px;
+}
+
+.services__headline {
+  font-family: var(--font-display);
+  font-size: clamp(42px, 5vw, 72px);
+  line-height: 0.92;
+  color: var(--white);
+  letter-spacing: 1px;
+}
+
+.services__list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(245, 243, 238, 0.08);
+}
+
+.services__item {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  align-items: center;
+  gap: 48px;
+  padding: 40px 0;
+  border-bottom: 1px solid rgba(245, 243, 238, 0.08);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.services__item:hover {
+  padding-left: 24px;
+  border-bottom-color: var(--gold);
+}
+
+.services__item:hover .services__number {
+  color: var(--gold);
+}
+
+.services__item:hover .services__name {
+  color: var(--gold);
+}
+
+.services__item:hover .services__arrow {
+  color: var(--gold);
+  transform: translateX(8px);
+}
+
+.services__item-left {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.services__number {
+  font-family: var(--font-display);
+  font-size: 20px;
+  color: rgba(245, 243, 238, 0.2);
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+  min-width: 32px;
+}
+
+.services__name {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3vw, 40px);
+  color: var(--white);
+  letter-spacing: 1px;
+  line-height: 1;
+  transition: color 0.3s ease;
+}
+
+.services__desc {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(245, 243, 238, 0.45);
+  line-height: 1.7;
+  transition: color 0.3s ease;
+}
+
+.services__item:hover .services__desc {
+  color: rgba(245, 243, 238, 0.7);
+}
+
+.services__arrow {
+  font-size: 24px;
+  color: rgba(245, 243, 238, 0.2);
+  transition: all 0.3s ease;
+}
